@@ -1,0 +1,74 @@
+Article 1634 of comp.theory:
+Path: mrcu!hrc63!logitek!mucs!ukc!mcsun!unido!fauern!ira.uka.de!sol.ctr.columbia.edu!lll-winken!uwm.edu!csd4.csd.uwm.edu!markh
+From: markh@csd4.csd.uwm.edu (Mark William Hopkins)
+Newsgroups: comp.theory
+Subject: Unknown proofs (was: Re: Question on halting problem)
+Keywords: for 10 bonus points...
+Message-ID: <11499@uwm.edu>
+Date: 28 Apr 91 19:02:38 GMT
+References: <Apr.25.08.44.05.1991.23782@athos.rutgers.edu> <4026@bruce.cs.monash.OZ.AU>
+Sender: news@uwm.edu
+Organization: University of Wisconsin - Milwaukee
+Lines: 22
+
+In article <4026@bruce.cs.monash.OZ.AU> mmcg@bruce.cs.monash.OZ.AU (Mike McGaughey) writes:
+>Yes.  Pick any famous unsolved mathematical theorem, and try to solve
+>it by brute force - i.e. prove that this one terminates:
+>
+>read x
+>while (x > 1)
+>    if x mod 2 = 0 then
+>	x = x / 2
+>    else
+>	x = 3 * x + 1
+
+Actually, there is a relatively simple proof that uses the irrationality of
+log(3)/log(2), but unfortunately I haven't the time to go into it: our system's
+gonna go down and I have to finish some major projects. :) :)
+
+Play around with the function
+
+		       f(1) = 0
+		       f(2n) = f(n) + 1
+		       f(2n + 1) = f(3n + 2) + 2
+
+for a while.  Maybe you'll see it...
+
+
+Article 1641 of comp.theory:
+Path: mrcu!hrc63!logitek!mucs!ukc!mcsun!uunet!zaphod.mps.ohio-state.edu!caen!ox.com!math.fu-berlin.de!dww
+From: dww@math.fu-berlin.de (Debora Weber-Wulff)
+Newsgroups: comp.theory
+Subject: Re: Question on halting problem
+Keywords: for 10 bonus points...
+Message-ID: <DHGQF2U@math.fu-berlin.de>
+Date: 29 Apr 91 17:00:04 GMT
+References: <Apr.25.08.44.05.1991.23782@athos.rutgers.edu> <1991Apr26.135918.8607@m.cs.uiuc.edu> <1161@creatures.cs.vt.edu>
+Sender: news@math.fu-berlin.de (Math Department)
+Organization: Free University of Berlin, Germany
+Lines: 22
+
+lavinus@csgrad.cs.vt.edu writes:
+>
+>My personal favorite is the following:
+>
+>proc foo(n)
+>   while (n > 1)
+>      if (even(n)) n = n div 2
+>      else         n = 3 * n + 1
+>end
+>
+>As far as I know, it has never been proven that this program halts for all
+>n.  Evidence to the contrary would be quite welcome (BTW, I believe the
+>credit for this problem is due to Ulam).
+
+In Germany, we learn that the "Rollercoaster Function" (Achterbahn-
+funktion) is due to the famous (German!) Mathematician Collatz.
+
+
+-- 
+Debora Weber-Wulff
+snail: FU Berlin, ZI Fachdidaktiken, Habelschwerdter Allee 45, W-1000 Berlin 33
+email: weberwu@inf.fu-berlin.de, dww@math.fu-berlin.de
+
+
