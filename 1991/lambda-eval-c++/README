@@ -1,0 +1,16 @@
+
+-rw-r----- 1 nic nic 5194 Jun  5  1991 lam.cxx
+
+
+My first explorations in C++... a lambda calculus interpreter!
+Various hand coded examples; culminating in: "twice square 7"
+
+    (\f. \x. f (f x)) (\i. i*i) 7 --> 2401
+
+
+The code needed a tiny bit of tweaking for compilation as modern C++
+
+$ diff lam.cxx lam-fixed.cxx
+
+$ g++ lam-fixed.cxx -Wno-write-strings -o lam
+$ ./lam
