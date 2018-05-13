@@ -1,1 +1,8 @@
+
+-rw-r----- 1 nic nic 2485 May  2  1991 comp.theory
+-rw-r----- 1 nic nic  503 Apr  8  1991 roller.c
+
 My first encounter with the collatz function. Triggered by reading comp.theory
+
+$ gcc roller.c -o roller
+$ ./roller 27

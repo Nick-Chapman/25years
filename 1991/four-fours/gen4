@@ -1,0 +1,15 @@
+
+#!/bin/sh
+
+echo creaing x-1
+echo 4 > x-1
+echo 24 >> x-1
+
+echo creating x-2;	(echo 44 ; echo 720 ; gen x-1 x-1 ) | sort -n | uniq > x-2
+echo creating x-3;	(echo 120 ;gen x-1 x-2) | sort -n | uniq > x-3
+echo creating x-3-1;	gen x-1 x-3 | sort -n | uniq > x-3-1
+echo creating x-2-2;	gen x-2 x-2 | sort -n | uniq > x-2-2
+echo creating x-4;	cat x-2-2 x-3-1 | sort -n | uniq > x-4
+echo creating hun;	cat x-4 | egrep '^[1-9][0-9]$|^[0-9]$|^100$' > hun
+
+echo found `cat hun | wc -l` '(of 101)'

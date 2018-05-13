@@ -1,0 +1,8 @@
+
+-rwxr-x--- 1 nic nic  487 Mar 22  1991 gen4*
+-rw-r----- 1 nic nic 1289 Mar 18  1991 gen.c
+
+Interesting combination of c code and scripting to solve the four-fours puzzle.
+
+$ gcc gen.c -o gen
+$  PATH=.:$PATH ./gen4
