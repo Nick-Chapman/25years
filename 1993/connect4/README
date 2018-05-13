@@ -1,10 +1,13 @@
 
+  -rw-r----- 1 nic nic  401 Apr 19  1991 calculate-weights.c
   -rw-r----- 1 nic nic 8710 Feb 12  1993 connect.c
 
 Build with:
 $ gcc connect.c -o connect
 
 This file contains a rewrite (from memory) of the connect4 program I had written at University. The date of my file is Feb 93, which is during the final month at Macroni Research Centre, my first job. But the comment at the file head says "to practise using Emacs"; so probably I wrote this version when I started after Uni in Sep 1990. New job: new editor! (I was a vi guy at Uni)
+
+(update: and now I found the calculate-weights.c -- my first example at meta programming! -- I think the date is clearly 1991)
 
 The programs plays connect4. The user interface is rudimentary text display, re-printing the board after every move. The machine selects its move using minimax with alpha-beta pruning, either to a fixed depth, or using a simplistic iterative-deepening, based on "minimum adds" (#positions considered). The default value of 40,000 has the machine search about 8 levels at the start of the game, but sticking it to 10,000,000 will get you to 12 levels, and it still basically instantaneous. (To change the value: type "i" (missing from the displayed help), to switch of iterative deepening, then "i" again, to turn it back on, and then you are prompted for the level. Or just hack the code!). As the game progress and columns fill up, the depth often increases, sometimes so the machine can see to the end of the game.
 
