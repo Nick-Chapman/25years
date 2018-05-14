@@ -1,0 +1,17 @@
+
+(in-package "USER")
+
+;(proclaim '(optimize (compilation-speed 0) (speed 3) (safety 0)))
+
+(load "~nic/lisp/match/match.l")
+;(load "unify.l")
+
+
+(defun ld ()
+  (load "unify.l"))
+
+
+(defun cf ()
+  (compile-file "unify.l")
+  (load "unify"))
+

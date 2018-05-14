@@ -1,0 +1,22 @@
+#!/bin/sh
+
+cat /usr/dict/words |	grep '^[aAbBcCdDgGoOrRtT]*$' |
+			grep -v '[aA].*[aA].*[aA]' |
+			grep -v '[bB].*[bB]' |
+			grep -v '[cC].*[cC]' |
+			grep -v '[dD].*[dD]' |
+			grep -v '[gG].*[gG]' |
+			grep -v '[oO].*[oO]' |
+			grep -v '[rR].*[rR]' |
+			grep -v '[tT].*[tT]' |
+			awk '		{t=0} \
+			/[aA]/		{t+=2} \
+			/[aA].*[aA]/	{t+=2} \
+			/[bB]/ 		{t+=4} \
+			/[cC]/ 		{t+=4} \
+			/[dD]/ 		{t+=3} \
+			/[gG]/ 		{t+=3} \
+			/[oO]/ 		{t+=2} \
+			/[rR]/ 		{t+=2} \
+			/[tT]/ 		{t+=2} \
+			{printf "%d	%s\n", t, $0}' | sort -nr
