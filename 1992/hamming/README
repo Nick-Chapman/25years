@@ -1,0 +1,10 @@
+
+-rw-r----- 1 nic nic 2245 Sep 21  1992 ham.c
+
+
+/*
+  Hamming numbers in C
+
+  This is pretty ugly.
+  I expect even in C it doesn't have to be this bad.
+  */ 
