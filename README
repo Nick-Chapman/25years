@@ -8,3 +8,6 @@ Next: collatz and four-fours. Also from 1991.
 Still 1991. We have a C++ lambda calculus interpreter. "twice square 7" -> 2401 
 
 More 1991: anagram-puzzle, unification-in-lisp.
+
+
+2001: lambda evaluation with C++ templates

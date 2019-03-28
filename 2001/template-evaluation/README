@@ -1,0 +1,32 @@
+
+  -rw-r--r--  1 nic nic  641 Oct  4  2001 eval-arith.C
+  -rw-r--r--  1 nic nic 3009 Oct  5  2001 lam.C
+  -rw-r--r--  1 nic nic  263 Oct  5  2001 Makefile
+
+
+
+Tiny fixes so code compiles as modern C++
+
+
+> using namespace std;
+> 
+33c35
+< class Lookup<x,ENV_Cons<x,value,env> > {
+---
+> struct Lookup<x,ENV_Cons<x,value,env> > {
+38c40
+< class Lookup<x,ENV_Cons<y,value,env> > {
+---
+> struct Lookup<x,ENV_Cons<y,value,env> > {
+104c106
+< void main() {
+---
+> int main() {
+
+
+
+$ make
+g++ -ftemplate-depth-10000   -c -o lam.o lam.C
+g++ -o lam lam.o
+./lam | tee lam.test
+***result = 81
